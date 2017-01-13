@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+	.fa{
+		width:300px;
+		font-size: 20px;
+		margin:0 auto;
+		background: #ccc;
+		padding:20px;
+	}
+	.demo{
+		margin-top: 100px;
+		margin-bottom: 100px;
+		
+	    padding: 6px 16px; 
+	    border: 1px solid #446d88;
+	    background: #58a linear-gradient(#77a0bb, #58a); 
+	    border-radius: 4px; 
+	    box-shadow: 0 1px 5px gray;
+	    color: white;
+	    text-shadow: 0 -1px 1px #335166; 
+	    font-size: 20px; 
+	    line-height: 30px;
+	}
+
+	.demo1{
+		padding: .3em .8em;
+		border: 1px solid #446d88;
+		/*background: #58a linear-gradient(#77a0bb, #58a);*/
+        background:#58a linear-gradient(hsla(0,0%,100%,.2),transparent);
+		border-radius: .2em;
+		box-shadow: 0 .05em .25em gray;
+		color: white;
+		text-shadow: 0 -.05em .05em #335166;
+		font-size: 125%;
+		line-height: 1.5;
+
+	}
+
+	.demo2{
+		margin:10px;
+		padding: .3em .8em;
+		border: 1px solid rgba(0, 0, 0, .1);
+		background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+		border-radius: .2em;
+		box-shadow: 0 .05em 1em rgba(0, 0, 0, .5);
+		color: white;
+		text-shadow: 0 -.05em 1em rgba(0, 0, 0, .5);
+		background-color: #c00;
+
+	}
+	.demo3{
+		background-color:#6b0;
+	}
+
+.callout {
+	border:1px solid red;
+	position: relative;
+}
+.callout::after {
+	content: "";
+	position: absolute;
+	top: -.4em;
+	left: 1em;
+	padding: .35em;
+	background: inherit;
+	border: inherit;
+	border-right: 0;
+	border-bottom: 0;
+	transform: rotate(45deg);
+}
+.callout::before {
+	content: "";
+	position: absolute;
+	top: -.4em;
+	left: 1em;
+	padding: .35em;
+	background: inherit;
+	border: inherit;
+	border-right: 0;
+	border-top: 0;
+	transform: rotate(45deg);
+}
+
+/*边框*/
+.border-test{
+	width: 100px;
+	height: 100px;
+	margin:0 auto;
+	border: 10px solid hsla(0, 0%, 100%, .5);
+	background: white;
+	background-clip: padding-box;
+
+}
+
+.box-shadow1{
+	margin-bottom: 40px;
+	width: 200px;
+background: yellowgreen;
+box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink;
+
+}
+
+.box-shadow2{
+	width: 200px;
+background: yellowgreen;
+box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, .6);
+
+}
+.outline1{
+	margin-top: 20px;
+	background: yellowgreen;
+	width: 100px;
+	height: 100px;
+	border:10px solid red;
+	outline: 3px dashed blue;
+	outline-offset: -10px;
+}
+
+
+.ot {
+	outline: .6em solid #655;
+	box-shadow: 0 0 0 .4em #655;   
+	max-width: 10em;
+	border-radius: .8em;
+	padding: 1em;
+	margin: 1em;
+	background: tan;
+	font: 100%/1.5 sans-serif;
+}
+.line{
+	float: left;
+	margin:30px;
+	width: 300px;
+	height: 300px;
+	
+}
+.line1{
+	width: 300px;
+	height: 300px;
+	
+	background: linear-gradient(45deg,#fb3 50%, #58a 0); background-size: 30px 30px;
+}
+.line2{
+background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+background-size: 30px 30px;
+}
+.line3{
+	background: repeating-linear-gradient(45deg, #fb3, #58a 30px);
+}
+.line4{
+	background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+
+}
+.line5{
+	background: #58a;
+	background-image: repeating-linear-gradient(30deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 15px, transparent 0, transparent 30px);
+
+	/*height: 100vh;*/
+}
+
+.conic{
+background: linear-gradient(cyan, transparent), linear-gradient(-45deg, magenta, transparent), linear-gradient(45deg, yellow, transparent);
+background-blend-mode: multiply;
+	
+
+}
+.t13{
+	clear: left;
+	background: hsl(20, 40%, 90%);
+	background-image: linear-gradient(90deg, #fb3 11px, transparent 0), linear-gradient(90deg, #ab4 23px, transparent 0), linear-gradient(90deg, #655 41px, transparent 0);
+	background-size: 41px 100%, 61px 100%, 83px 100%;
+}
+.con{
+	width: 400px;
+	height:300px;
+	margin:0 auto;
+	float: left;
+}
+.con1{
+	clear: left;
+	width: 300px;
+	height:200px;
+	margin:0 auto;
+
+}
+
+
+.t14{
+	border: 1em solid transparent;
+	background: linear-gradient(white, white) padding-box,
+	            url(http://csssecrets.io/images/stone-art.jpg) border-box  0 / cover;
+	
+	/* Styling & enable resize */
+	width: 21em;
+	padding: 1em;
+	overflow: hidden;
+	resize: both;
+	font: 100%/1.6 Baskerville, Palatino, serif;
+}
+
+
+.t15{
+
+		border: 40px solid transparent;
+		border-image: 33.334% url('data:image/svg+xml,<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30"> \
+		                      <circle cx="5" cy="5" r="5" fill="%23ab4"%2F><circle cx="15" cy="5" r="5" fill=" %23655"%2F> \
+		                      <circle cx="25" cy="5" r="5" fill="%23e07"%2F><circle cx="5" cy="15" r="5" fill=" %23655"%2F> \
+		                      <circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F> \
+		                      <circle cx="25" cy="15" r="5" fill=" %23655"%2F><circle cx="5" cy="25" r="5" fill="%23fb3"%2F> \
+		                      <circle cx="15" cy="25" r="5" fill=" %23655"%2F><circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>');
+		padding: 1em;
+		max-width: 20em;
+		font: 130%/1.6 Baskerville, Palatino, serif;
+	
+
+	
+}
+.t16 {
+	margin-top: 1em;
+	border-image-repeat: round;
+}
+.t17{
+	
+		padding: 1em;
+		border: 1em solid transparent;
+		background: linear-gradient(white, white) padding-box,
+		            repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, 
+		              #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 6em 6em;
+		
+		max-width: 20em;
+		font: 100%/1.6 Baskerville, Palatino, serif;
+	
+}
+@keyframes ants { to { background-position: 100% 100% } }
+
+.t18 {
+	padding: 1em;
+	border: 1px solid transparent;
+	background: linear-gradient(white, white) padding-box,
+	            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+	animation: ants 12s linear infinite;
+	
+	max-width: 20em;
+	font: 100%/1.6 Baskerville, Palatino, serif;
+}
+
+.footnote {
+	border-top: .15em solid transparent;
+	border-image: 100% 0 0 linear-gradient(90deg, currentColor 4em, transparent 0);
+	padding-top: .5em;
+	font: 220%/1.4 Baskerville, Palatino, serif;
+}
+
+.button { transform: skewX(45deg); }
+.button > div { transform: skewX(-45deg); }
+
+.button {
+	display: inline-block;
+	padding: .5em 1em;
+	border: 0; margin: .5em;
+	background: #58a;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 200%/1 sans-serif;
+}
+
+.button1 {
+	position: relative;
+	display: inline-block;
+	padding: .5em 1em;
+	border: 0; margin: .5em;
+	background: transparent;
+	color: white;
+	/*text-transform: uppercase;*/
+	text-decoration: none;
+	font: bold 200%/1 sans-serif;
+}
+
+.button1::before {
+	content: ''; /* 用伪元素来生成一个矩形  To generate the box */
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+	background: #58a;
+	transform: skew(45deg);
+}
+
+.actions a:before {
+  content: "";
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 0;
+  background: url(sprite.png);
+}
+
+.save a:before { background-position: 0 -16px; }
+.delete a:before { background-position: 0 -32px; }
+.share a:before { background-position: 0 -48px; }
+.comment a:before { background-position: 0 -64px; }
+
+.diamond {
+	width: 200px;
+	height: 200px;
+	transform: rotate(45deg);
+	overflow: hidden;
+	margin: 100px;
+}
+
+.diamond img {
+	max-width: 100%;
+	transform: rotate(-45deg) scale(1.42);
+	z-index: -1;
+	position: relative;
+}
+
+.t19{
+
+	
+		background: #58a;
+		background: linear-gradient(135deg, transparent 15px, #58a 0) top left,
+		            linear-gradient(-135deg, transparent 15px, #58a 0) top right,
+		            linear-gradient(-45deg, transparent 15px, #58a 0) bottom right,
+		            linear-gradient(45deg, transparent 15px, #58a 0) bottom left;
+		background-size: 50% 50%;
+		background-repeat: no-repeat;
+		
+		padding: 1em 1.2em;
+		max-width: 12em;
+		color: white;
+		font: 150%/1.6 Baskerville, Palatino, serif;
+
+}
+.t20{
+	background: #58a;
+	background: linear-gradient(-45deg, transparent 15px, #58a 0)         right, linear-gradient(45deg, transparent 15px, #655 0)         left;
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+.t21 {
+	background: #58a;
+	background:	radial-gradient(circle at top left, transparent 15px, #58a 0) top left,
+	            radial-gradient(circle at top right, transparent 15px, #58a 0) top right,
+	            radial-gradient(circle at bottom right, transparent 15px, #58a 0) bottom right,
+	            radial-gradient(circle at bottom left, transparent 15px, #58a 0) bottom left;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	
+	padding: 1em 1.2em;
+	max-width: 12em;
+	color: white;
+	/*font: 130%/1.6 Baskerville, Palatino, serif;*/
+}
+
+.t22 {
+	border: 21px solid transparent;
+	border-image: 1 url('data:image/svg+xml,\
+	                      <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="%2358a">\
+	                      <polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2" />\
+	                      </svg>');
+	background: #58a;
+	background-clip: padding-box;
+	
+	padding: .2em .3em;
+	max-width: 12em;
+	color: white;
+	font: 150%/1.6 Baskerville, Palatino, serif;
+}
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+<div class="fa">
+	<div class="demo">
+		Yes!
+	</div>
+
+	<div class="demo1">
+		Yes!
+	</div>
+
+	<a href=""><div class="demo2">
+		ok
+	</div></a>
+	<div class="demo2 demo3">
+		concel
+	</div>
+
+	<div class="callout">
+		levaerou
+	</div>
+
+
+	<div class="border-test">
+		
+		border
+
+	</div>
+
+	<div class="box-shadow1">
+		box-show1 实现多边框
+	
+
+	</div>
+	<div class="box-shadow2">
+		box-show2 实现多边框
+	
+
+	</div>
+
+	<div class="outline1">
+		outline1
+	
+
+	</div>
+
+	<div class="ot">
+		I have a nice subtle inner rounding, don’t I look pretty?
+	</div>
+
+
+</div>
+
+<!-- 斜向条纹-->
+<div class="line line1">
+	background: linear-gradient(45deg,#fb3 50%, #58a 0); background-size: 30px 30px;<br>
+	原因在于我们只是把每个“贴片” 1①内部的 渐变旋转了 45°，而不是把整个重复的背景都旋转了
+
+</div>
+
+<div class="line line2">
+	单个贴片包 含了四条条纹，而不是两条，只有这样才有可能做到无缝拼接<br>
+	如果想让条纹的宽度变化为我们原本想要的 15px，就需要 把 background-size 指定为<br>
+	background-size: 42.426406871px 42.426406871px;由勾股定理得出
+</div>	
+
+
+<div class="line line3">
+	background: repeating-linear-gradient(45deg, #fb3, #58a 30px);
+</div>
+
+<div class="line line4">
+	background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+</div>
+<div class="line line5"></div>
+
+<div class="line conic">
+	1234
+</div>
+
+<div class="con t13"></div>
+
+<div class="con t14">t14让背静当边框</div>
+
+<div class="con t15">t15</div>
+<div class="con t15 t16">t16</div>
+
+<div class="con t17">
+	t17我是一封老式信封
+</div>
+
+<div class="con1 t18">t18</div>
+
+<div class="con1 footnote">t18</div>
+
+<div class="con1 button"  style="margin-left:100px">
+	99
+	<div>
+		12321312
+	</div>
+</div>
+
+<div class="button1">利用before实现内容不倾斜</div>
+
+<ul class="actions">
+  <li class="save"><a href="#">Save</a></li>
+  <li class="delete"><a href="#">Delete</a></li>
+  <li class="share"><a href="#">Share</a></li>
+  <li class="comment"><a href="#">Comment</a></li>
+</ul>
+
+<div class="diamond">
+	
+	<img src="../dist/img/avatar5.png" alt="">
+</div>
+
+
+
+
+<div class="t19">
+	切角。
+</div>
+
+<div class="t20">
+	切角。
+</div>
+
+<div class="t21">
+	t21t21t21t21t21t21t21t21t21t21t21t21t21t21
+</div>
+
+<div class="t22">
+	t22  border-image 和内联 SVG 实现斜面切角的创意
+</div>
+
+
+</body>
+
+	
+</html>
